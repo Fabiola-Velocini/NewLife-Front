@@ -1,0 +1,42 @@
+main {
+  width: 100vw;
+}
+
+form {
+  text-align: center;
+}
+
+form mat-form-field{
+  margin: 0 0.75% 0.75% 0.75%;
+}
+
+.input-menor{
+  width: 15%;
+}
+
+.input-maior{
+  width: 48%;
+}
+
+#esquerda{
+  margin-right: 17.5%;
+}
+
+button{
+  margin: 0.75% 0.75% 1.5% 0.75%;
+  transition: 1.5s;
+  width: 7.5%;
+}
+
+#fechar{
+  background: #26C6DA;
+  color: white;
+}
+
+#salvar:hover{
+  background: #3949AB;
+}
+
+#fechar:hover{
+  background: #00ACC1;
+}

@@ -1,0 +1,42 @@
+body{
+  background: #5C6BC0;
+}
+
+.card{
+  border-radius: 20px;
+  margin: 0 auto;
+  padding: 5%;
+  position: relative;
+  text-align: center;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 35%;
+}
+
+.card h1{
+  color:#26C6DA;
+  font-size: 32px;
+  font-weight: bold;
+}
+
+.card h2{
+  color:#26C6DA;
+  font-size: 26px;
+}
+
+.card h3{
+  font-size: 20px;
+}
+
+.button{
+  border-radius: 10px;
+  font-weight: bold;
+  height: 50px;
+  margin: 1.5%;
+  transition: 1s;
+  width: 150px;
+}
+
+.button:hover{
+  background: #3949AB;
+}

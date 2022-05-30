@@ -1,0 +1,34 @@
+<mat-toolbar color = "primary" class = "toolbar">
+  <h1>New Life</h1>
+  <h2>Sistema de Gerenciamento de Acesso</h2>
+</mat-toolbar>
+
+<mat-card class = "card">
+  <h3>Consulta de informações</h3>
+</mat-card>
+
+<form class = "form">
+  <mat-form-field appearance = "fill" class = "input-menor">
+    <mat-label>Placa do veículo</mat-label>
+    <input matInput>
+  </mat-form-field>
+
+  <mat-form-field appearance = "fill" class = "input-maior">
+    <mat-label>Morador</mat-label>
+    <input matInput>
+  </mat-form-field>
+
+  <mat-form-field appearance = "fill" class = "input-menor">
+    <mat-label>Apartamento</mat-label>
+    <input matInput>
+  </mat-form-field>
+
+  <div>
+    <button mat-raised-button color = "primary" routerLink = "/consulta/retorno" class = "button" id = "consultar">Consultar</button>
+    <button mat-raised-button color = "secondary" routerLink = "/home" class = "button" id = "fechar">Fechar</button>
+  </div>
+</form>
+
+<router-outlet></router-outlet>
+
+

@@ -1,0 +1,70 @@
+<body>
+  <mat-toolbar color = "primary" class = "toolbar"> Funcionários </mat-toolbar>
+  <div class = "table">
+
+    <table mat-table [dataSource] = "funcionarios$" class="mat-elevation-z8">
+      <ng-container matColumnDef="id_funcionario">
+        <th mat-header-cell *matHeaderCellDef> ID </th>
+        <td mat-cell *matCellDef="let funcionario"> {{funcionario.id_funcionario}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="id_apartamento">
+        <th mat-header-cell *matHeaderCellDef> Apartamento </th>
+        <td mat-cell *matCellDef="let funcionario"> {{funcionario.id_apartamento}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="nome">
+        <th mat-header-cell *matHeaderCellDef> Funcionário </th>
+        <td mat-cell *matCellDef="let funcionario"> {{funcionario.nome}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="rg">
+        <th mat-header-cell *matHeaderCellDef> RG </th>
+        <td mat-cell *matCellDef="let funcionario"> {{funcionario.rg}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="cpf">
+        <th mat-header-cell *matHeaderCellDef> CPF </th>
+        <td mat-cell *matCellDef="let funcionario"> {{funcionario.cpf}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="telefone1">
+        <th mat-header-cell *matHeaderCellDef> Telefone </th>
+        <td mat-cell *matCellDef="let funcionario"> {{funcionario.telefone1}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="telefone2">
+        <th mat-header-cell *matHeaderCellDef> Telefone </th>
+        <td mat-cell *matCellDef="let funcionario"> {{funcionario.telefone2}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="observacao">
+        <th mat-header-cell *matHeaderCellDef> Observações </th>
+        <td mat-cell *matCellDef="let funcionario"> {{funcionario.observacao}} </td>
+      </ng-container>
+
+      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+    </table>
+  </div>
+
+  <footer>
+    <button mat-mini-fab color = "primary" aria-label="Editar" class = "button">
+      <mat-icon>edit</mat-icon>
+    </button>
+
+    <button mat-mini-fab color = "primary" aria-label="Adicionar" class = "button">
+      <mat-icon routerLink="/cadastro/funcionarioes">add</mat-icon>
+    </button>
+
+    <button mat-mini-fab color = "warn" aria-label="Excluir" class = "button">
+      <mat-icon>delete</mat-icon>
+    </button>
+
+      <button mat-mini-fab color = "primary" aria-label="Excluir" class = "button">
+      <mat-icon routerLink="/home">home</mat-icon>
+    </button>
+  </footer>
+</body>
+
+

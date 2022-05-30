@@ -1,0 +1,75 @@
+<main>
+  <form [formGroup]="form">
+    <mat-form-field appearance = "fill" class = "input-menor">
+      <mat-label>Apartamento</mat-label>
+      <input matInput formControlName = "id_apartamento" required>
+    </mat-form-field>
+
+    <mat-form-field appearance = "fill" class = "input-maior">
+      <mat-label>Morador</mat-label>
+      <input matInput formControlName = "nome" required>
+    </mat-form-field>
+
+    <br>
+
+    <mat-form-field appearance = "fill" class = "input-menor">
+      <mat-label>RG</mat-label>
+      <input matInput formControlName = "rg" #rg minlength = "9" maxlength = "9" required>
+      <mat-hint align = "start">{{rg.value.length}} / 9</mat-hint>
+    </mat-form-field>
+
+    <mat-form-field appearance = "fill" class = "input-menor">
+      <mat-label>CPF</mat-label>
+      <input matInput formControlName = "cpf" #cpf minlength = "11" maxlength = "11" required>
+      <mat-hint align = "start">{{cpf.value.length}} / 11</mat-hint>
+    </mat-form-field>
+
+
+    <mat-form-field appearance="fill" class = "input-menor">
+      <mat-label>Telefone</mat-label>
+      <input matInput formControlName = "telefone1" #tel1 minlength = "13" maxlength = "13" required>
+      <mat-hint align = "start">{{tel1.value.length}} / 13</mat-hint>
+    </mat-form-field>
+
+
+    <mat-form-field appearance="fill" class = "input-menor">
+      <mat-label>Telefone</mat-label>
+      <input matInput formControlName = "telefone2" #tel2 minlength = "13" maxlength = "13" required>
+      <mat-hint align = "start">{{tel2.value.length}} / 13</mat-hint>
+    </mat-form-field>
+
+    <br>
+
+    <mat-form-field appearance="fill" class = "input-maior" id = "esquerda">
+      <mat-label>E-mail</mat-label>
+      <input type = "email" matInput formControlName = "email" required>
+    </mat-form-field>
+
+    <br>
+
+    <mat-form-field appearance="fill" class = "input-maior">
+      <mat-label>Contato de emergência</mat-label>
+      <input matInput formControlName = "contatoEmergencia" required>
+    </mat-form-field>
+
+    <mat-form-field appearance="fill" class = "input-menor">
+      <mat-label>Telefone</mat-label>
+      <input matInput formControlName = "ceTelefone" #ceTel minlength = "13" maxlength = "13" required>
+      <mat-hint align = "start">{{ceTel.value.length}} / 13</mat-hint>
+    </mat-form-field>
+
+    <br>
+
+    <mat-form-field appearance="fill" class = "input-maior" id = "esquerda">
+      <mat-label>Observações</mat-label>
+      <textarea matInput formControlName = "observacao" rows = "3"></textarea>
+    </mat-form-field>
+
+    <br>
+
+    <div>
+      <button mat-raised-button color = "primary" (click)="saveMorador()" id = "salvar">Salvar</button>
+      <button mat-raised-button routerLink = "/home" id = "fechar">Fechar</button>
+    </div>
+  </form>
+</main>
